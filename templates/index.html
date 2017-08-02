@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Super Wall</title>
+  </head>
+  <body>
+    <h1>Super Wall</h1>
+    <form action="/" method="post"/>
+      <input type="text" name="username"/>
+      <input type="submit" value="Add User" />
+    </form>
+    <ul>
+      {% for name, messages in db.items() %}
+        <li>
+          <a href="/wall/{{name}}"/>{{name}}</a> ({{messages|length}} posts)
+        </li>
+      {% endfor %}
+    </ul>
+  </body>
+</html>

@@ -1,0 +1,13 @@
+version: '2'
+services:
+  web:
+    build: .
+    ports:
+     - "5000:5000"
+    volumes:
+     - .:/code
+    environment:
+      - VIRTUAL_HOST=week1-pp.piti.me
+      - LETSENCRYPT_HOST=week1-pp.piti.me
+      - LETSENCRYPT_EMAIL=piti118@gmail.com
+    network_mode: "bridge"

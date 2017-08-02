@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Super Wall</title>
+  </head>
+  <body>
+    <h1>Wall for {{name}}</h1>
+    <form action="/wall/{{name}}" method="post">
+      <input type="text" name="message" />
+      <input type="submit" name="Submit" value= "Post!" />
+    </form>
+    <ul>
+      {% for post in posts %}
+        <li>
+          {{post}}
+        </li>
+      {% endfor %}
+    </ul>
+    <a href="/">Back to home</a>
+  </body>
+</html>
